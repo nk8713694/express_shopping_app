@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize")
 
-
+try{
 const db=new Sequelize('shopdb', 'shopper', 'shoppass', {
     host: 'localhost',
     dialect: 'mysql'
@@ -49,3 +49,8 @@ const db=new Sequelize('shopdb', 'shopper', 'shoppass', {
   exports=module.exports={
       User,Product
   }
+}catch(err){
+    exports=module.exports={
+        User,Product
+    }
+}

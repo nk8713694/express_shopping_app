@@ -8,7 +8,7 @@ app.use(express.json())
 
 app.use(express.urlencoded({extended:true}))
 
-app.use('/api',require('./routes/api').route)
+// app.use('/api',require('./routes/api').route)
 
 app.use('/',express.static(path.join(__dirname,"public")))
 
